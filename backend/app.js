@@ -1,6 +1,9 @@
 import express from 'express'
 import morgan from 'morgan' // a logger - to see all types of request made to server in log
 
+import connect from './db/db.js'; // if error shows - use ctrl + shift + p then reload window
+connect();
+
 const app = express(); // express server created 
 app.use(morgan('dev'));
 

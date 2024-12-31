@@ -1,5 +1,6 @@
-import dotenv from 'dotenv'
-dotenv.config(); // to use environment variables from .env file
+// import dotenv from 'dotenv'
+// dotenv.config(); // to use environment variables from .env file
+import 'dotenv/config.js'
 
 import http from 'http';
 import app from './app.js';
