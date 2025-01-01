@@ -26,7 +26,7 @@ const Login = () => {
             localStorage.setItem('token', res.data.token)
             setUser(res.data.user)
 
-            navigate('/')
+            navigate('/') // in success navigate to home page
         }).catch((err) => {
             console.log(err.response.data)
         })

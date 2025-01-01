@@ -3,6 +3,7 @@ import morgan from 'morgan' // a logger - to see all types of request made to se
 
 import userRoutes from './routes/user.routes.js';
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 
 
 import connect from './db/db.js'; // if error shows - use ctrl + shift + p then reload window
@@ -10,6 +11,7 @@ connect();
 
 const app = express(); // express server created 
 
+app.use(cors());
 app.use(morgan('dev'));
 
 // middlewares
