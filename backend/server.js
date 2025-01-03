@@ -96,7 +96,7 @@ io.on('connection', socket => {
         const message = data.message;
 
         const aiIsPresentInMessage = message.includes('@ai');
-        socket.broadcast.to(socket.roomId).emit('project-message', data)
+        socket.broadcast.to(socket.roomId).emit('project-message', data) // to avoid getting the message back to sender
 
         if (aiIsPresentInMessage) {
 
