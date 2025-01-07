@@ -26,7 +26,7 @@ const Login = () => {
             localStorage.setItem('token', res.data.token)
             setUser(res.data.user)
 
-            navigate('/') // in success navigate to home page
+            navigate('/')
         }).catch((err) => {
             console.log(err.response.data)
         })
@@ -68,7 +68,7 @@ const Login = () => {
                     </button>
                 </form>
                 <p className="text-gray-400 mt-4">
-                {"Don't have an account?"} <Link to="/register" className="text-blue-500 hover:underline">Create one</Link>
+                    Don't have an account? <Link to="/register" className="text-blue-500 hover:underline">Create one</Link>
                 </p>
             </div>
         </div>
